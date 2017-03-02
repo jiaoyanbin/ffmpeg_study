@@ -1,0 +1,144 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_v"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="切换视频流模式" />
+
+            <Button
+                android:id="@+id/btn_i_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="切换图片流模式一" />
+
+            <Button
+                android:id="@+id/btn_i_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="切换图片流模式二" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="100dp" >
+
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+            <SurfaceView
+                android:id="@+id/sv"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_ewm_one"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#ff889977" />
+
+    <ImageView
+        android:id="@+id/img_ewm_two"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="#ff889977" />
+
+    <ImageView
+        android:id="@+id/img_ewm_four"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="#ff889977" />
+
+    <ImageView
+        android:id="@+id/img_ewm_five"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:background="#ff889977" />
+
+    <ImageView
+        android:id="@+id/img_ewm_three"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="#ff889977" />
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffffff"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请确保welink和wlCmd服务已启动"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:padding="20dp"
+            android:text="点击开始" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:onClick="kill"
+            android:padding="20dp"
+            android:text="点击kill" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="#00000000"
+        android:text=""
+        android:textColor="#ff0000"
+        android:textSize="15dp" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_result"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text=""
+        android:background="#ffffff"
+        android:textColor="#ff0000"
+        android:textSize="20dp" />
+
+</RelativeLayout>
